@@ -1,4 +1,4 @@
-import { hijaiyah } from './hijaiyah.js';
+import { hijaiyah } from 'https://raw.githubusercontent.com/konro99/Hijaiyyah/main/hijaiyah.js';
 
 document.addEventListener("DOMContentLoaded", function() {
     const gridContainer = document.getElementById('hijaiyahGrid');
