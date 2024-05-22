@@ -1,0 +1,118 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    width: 90%;
+    max-width: 800px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background-color: #ffffff;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    overflow: auto;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    gap: 10px;
+    width: 100%;
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 4vw; /* Menggunakan unit relatif */
+    font-weight: bold;
+    color: #333;
+    height: auto;
+    padding: 10px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.grid-item:hover {
+    transform: scale(1.1);
+    background-color: #e0e0e0;
+}
+
+.grid-item .arabic {
+    font-size: 4vw; /* Menggunakan unit relatif */
+    font-weight: bold;
+}
+
+.grid-item .latin {
+    font-size: 2.5vw; /* Menggunakan unit relatif */
+    color: #666;
+}
+
+.text-box {
+    margin: 10px 0;
+    font-size: 5vw; /* Menggunakan unit relatif */
+    text-align: center;
+    width: 100%;
+}
+
+#randomLetter {
+    font-size: 20vw; /* Menggunakan unit relatif */
+    color: #ff4500; /* Warna oranye cerah */
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+@media (min-width: 600px) {
+    .grid-item {
+        font-size: 24px; /* Ukuran font tetap untuk layar lebih besar */
+    }
+
+    .grid-item .arabic {
+        font-size: 24px; /* Ukuran font tetap untuk layar lebih besar */
+    }
+
+    .grid-item .latin {
+        font-size: 16px; /* Ukuran font tetap untuk layar lebih besar */
+    }
+
+    .text-box {
+        font-size: 24px; /* Ukuran font tetap untuk layar lebih besar */
+    }
+
+    #randomLetter {
+        font-size: 48px; /* Ukuran font tetap untuk layar lebih besar */
+    }
+}
+
+@media (max-width: 600px) {
+    .main-container {
+        width: 100%;
+    }
+
+    .container {
+        width: 90%;
+    }
+}
